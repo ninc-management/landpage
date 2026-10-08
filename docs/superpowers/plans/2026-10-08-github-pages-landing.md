@@ -2,7 +2,7 @@
 
 **Objetivo:** portar a landing aprovada em `C:/workspace/ninc` para `ninc-management/landpage`, funcionando como site estático no domínio existente `https://ninc.digital/`.
 
-**Arquitetura:** manter React, Next.js App Router e Tailwind, com `output: export`. A página inicial renderiza diretamente os componentes públicos. Nenhuma sessão, Prisma, API, middleware ou segredo da aplicação entra no novo projeto. Arquivos antigos são preservados em `legacy-jekyll` e ficam fora do artefato publicado.
+**Arquitetura:** manter React, Next.js App Router e Tailwind, com `output: export`. A página inicial renderiza diretamente os componentes públicos. Nenhuma sessão, Prisma, API, middleware ou segredo da aplicação entra no novo projeto. Os arquivos do tema Jekyll anterior são removidos do repositório.
 
 **Execução:** implementação local nesta sessão, autorizada pelo pedido de adaptação. Branch `codex/github-pages-landing`; publicação e mudanças na configuração remota do Pages não fazem parte desta etapa.
 
@@ -11,7 +11,7 @@
 - [x] Gerar `out`, robots/sitemap, `.nojekyll` e CNAME apropriado; preparar workflow com validação de PR sem publicação e deploy somente de main.
 - [x] Validar testes, TypeScript, build e arquivos exportados em ambos os caminhos; verificar interações em navegador servindo apenas os arquivos estáticos. Documentar ativação do GitHub Actions em Settings → Pages e a URL da prévia.
 
-**Decisões confirmadas:** domínio `ninc.digital`, conforme resposta do usuário; domínio da aplicação não será usado como canonical. Arquivos Jekyll antigos são preservados. Dependências ficam limitadas à landing. Nenhuma alteração será feita nas mudanças já existentes no repositório NINC.
+**Decisões confirmadas:** domínio `ninc.digital`, conforme resposta do usuário; domínio da aplicação não será usado como canonical. Remover os arquivos Jekyll antigos, conforme orientação do Ícaro transmitida pelo usuário. Dependências ficam limitadas à landing. Nenhuma alteração será feita nas mudanças já existentes no repositório NINC.
 
 **Verificação realizada:** 3 testes de configuração e 43 testes Jest, distribuídos em 20 suites; TypeScript sem erros; exportação de produção na raiz e em `/landpage`. Em ambos os builds, 54 referências locais do HTML apontaram para arquivos existentes. Conferidos canonical, sitemap, robots, CNAME e ausência de backend e tema antigo em `out`. YAML e comando de configuração do workflow validados localmente. No navegador, a prévia estática carregou fotos e máscaras de logo com basePath, sem erros de console ou rolagem horizontal no celular de 390 px; ampliação de captura, FAQ e carregamento do YouTube após clique funcionaram.
 

@@ -12,7 +12,6 @@ assert.equal((html.match(/<h1\b/g)||[]).length,1,'A landing deve ter um único H
 assert.ok(html.includes('NINC ERP | ERP para engenharia e projetos'));
 assert.ok(html.includes('Ingrid Vitória'));
 assert.ok(!html.includes('href="/login"')&&!html.includes('href="/signup"'));
-assert.ok(!fs.existsSync(path.join(out,'legacy-jekyll')),'O tema anterior não pode ser publicado');
 assert.ok(!fs.existsSync(path.join(out,'api')),'Não há backend no Pages');
 const canonical = html.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
 assert.equal(new URL(canonical).href,site.url,'Canonical incorreto');
