@@ -64,7 +64,6 @@ Copie `.env.example` para `.env.local` somente se precisar personalizar a URL no
 - `public/suporte/guias/`: capturas estáticas da plataforma.
 - `config/site.cjs` e `lib/assets.ts`: resolução consistente de domínio e caminhos.
 - `scripts/`: preparação, validação e prévia do artefato estático.
-- `legacy-jekyll/`: tema anterior preservado como referência. Não é compilado, testado nem publicado; seus workflows também ficam inativos nesta pasta. A licença original permanece na raiz.
 
 O SEO mantém canonical, Open Graph, Twitter, identificação da marca e do produto em JSON-LD e as perguntas reais do FAQ. Sitemap e dados estruturados usam o mesmo domínio de publicação. Posição e indexação no Google não são garantidas; a confirmação de domínio e o envio de sitemap ao Search Console são feitos após publicar.
 
