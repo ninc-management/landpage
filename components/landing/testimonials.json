@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Lucas Costa",
+    "rating": 5,
+    "quote": "A plataforma tem auxiliado de uma forma muito assertiva a gestão dos contratos, formulação de propostas e controle financeiro da companhia que trabalho. Veio para unir funções essenciais em um único ambiente! Além disso, a integração com a IA tem feito a diferença na execução de demandas de forma mais ágil e automatizada.",
+    "photo": "/landing/depoimentos/lucas-costa.jpg"
+  },
+  {
+    "name": "Ingrid Vitória",
+    "rating": 5,
+    "quote": "Minha experiência com a plataforma tem sido muito positiva. Gosto da organização e da facilidade de uso, principalmente na gestão de contratos. A área financeira também é muito útil, pois mostra de forma clara as entradas, saídas e os valores a pagar e receber. Isso facilita bastante o acompanhamento financeiro e ajuda na rotina do dia a dia.",
+    "photo": "/landing/depoimentos/ingrid-vitoria.jpg"
+  },
+  {
+    "name": "Natanael Filho",
+    "rating": 5,
+    "quote": "É uma ferramenta que me ajuda a gerir boa parte das finanças empresariais. Com as funções de gerar propostas e contratos, consigo ter um controle financeiro que dispensa planilhas! Além dos indicadores que me mostram de forma rápida o que preciso saber. Os cadastros de itens dão a possibilidade de personalizar as condições de precificação dos produtos ofertados; e a integração com a IA permite ter mais facilidade de criar pelo celular e ver como usar melhor os recursos disponíveis.",
+    "photo": "/landing/depoimentos/natanael-filho.jpg"
+  },
+  {
+    "name": "Izaac Simão",
+    "rating": 5,
+    "quote": "Plataforma muito completa, dinâmica e fácil de usar para a gestão de propostas e contratos. As funcionalidades ajudam bastante a ter uma visão clara e atualizada dos processos da empresa, ajudando o acompanhamento no dia a dia. Também é uma plataforma leve e com boa velocidade de resposta. Outro ponto positivo é a equipe de suporte, que sempre atende de forma rápida quando precisamos de algum ajuste ou auxílio.",
+    "photo": "/landing/depoimentos/izaac-simao.jpg"
+  }
+]
