@@ -1,0 +1,11 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const { resolveSiteSettings } = require('../config/site.cjs');
+const out = path.resolve(__dirname, '../out');
+if (!fs.existsSync(path.join(out, 'index.html'))) throw new Error('Execute next build antes de preparar o artefato.');
+fs.writeFileSync(path.join(out, '.nojekyll'), '');
+const { customDomain } = resolveSiteSettings();
+const cname = path.join(out, 'CNAME');
+if (customDomain) fs.writeFileSync(cname, `${customDomain}\n`);
+else if (fs.existsSync(cname)) fs.unlinkSync(cname);
+console.log(`Artefato estático preparado em out (${customDomain || 'domínio padrão do GitHub Pages'}).`);

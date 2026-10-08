@@ -15,7 +15,7 @@ Gemfile.lock
 # Node.js and NPM
 node_modules
 npm-debug.log*
-package-lock.json
+# O lockfile da landing faz parte do build reproduzível (npm ci).
 codekit-config.json
 
 # macOS
@@ -27,3 +27,12 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# Landing estática
+.next/
+out/
+coverage/
+.local-preview/
+*.tsbuildinfo
+.env*
+!.env.example

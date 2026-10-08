@@ -1,0 +1,61 @@
+name: Landing — GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Ler o endereço configurado no Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Configurar domínio e basePath
+        env:
+          PAGES_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          node -e 'const {resolveSiteSettings}=require("./config/site.cjs"); const fs=require("node:fs"); const url=process.env.PAGES_URL.replace(/^http:/,"https:"); const site=resolveSiteSettings({NINC_SITE_URL:url}); fs.appendFileSync(process.env.GITHUB_ENV,`NINC_SITE_URL=${site.url}\n`);'
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
+        env:
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+      - run: npm run check:export
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          path: out
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar o artefato estático
+        id: deployment
+        uses: actions/deploy-pages@v4
