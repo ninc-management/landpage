@@ -28,7 +28,7 @@ describe("TeamSecuritySection", () => {
 
     const section = screen.getByRole("region", { name: "Cada pessoa com o acesso certo. A sua marca em tudo." });
     expect(section).toHaveAttribute("id", "equipe");
-    expect(screen.getByText("FL. 07 — Equipe e segurança")).toBeInTheDocument();
+    expect(screen.getByText("Equipe e segurança")).toBeInTheDocument();
 
     const cards = screen.getAllByRole("heading", { level: 3 }).map((h) => h.textContent);
     expect(cards).toEqual([

@@ -16,7 +16,7 @@ import {
 } from "@/components/landing/primitives";
 
 /*
- * FL. 01 — Hero ("inicio"). Componente de servidor: a entrada é só CSS (tailwindcss-animate),
+ * Hero ("inicio"). Componente de servidor: a entrada é só CSS (tailwindcss-animate),
  * então o h1 e o painel (LCP) saem renderizados no servidor.
  * A seção é z-10 para o visual (que invade a próxima prancha via -mb) pintar por cima de "publico",
  * que precisa começar com pt-36 sm:pt-56 lg:pt-72. `flow-root` impede que o -mb do visual "vaze" pela
@@ -40,7 +40,7 @@ export function Hero() {
       aria-labelledby="inicio-titulo"
       className="relative isolate z-10 flow-root scroll-mt-20 bg-gradient-to-br from-ninc-950 via-ninc-900 to-ninc-700 text-white dark:border-b dark:border-white/5"
     >
-      {/* Prancha: grade técnica, brilhos, monograma d'água e índice da folha. */}
+      {/* Grade técnica, brilhos, monograma d'água e nome da plataforma. */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
@@ -53,7 +53,7 @@ export function Hero() {
           className="absolute -right-40 top-24 hidden text-white/[0.04] motion-safe:animate-[spin_120s_linear_infinite] dark:text-white/[0.04] sm:block"
         />
         <p className="absolute left-4 top-6 font-mono text-[10px] uppercase tracking-[0.22em] text-ninc-100/60 sm:left-8">
-          FL. 01 — NINC ERP
+          NINC ERP
         </p>
       </div>
 

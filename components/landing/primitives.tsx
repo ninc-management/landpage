@@ -79,7 +79,7 @@ export function Section({
   );
 }
 
-/** Rótulo mono "FL. 02 — Diagnóstico" com um traço de 32px antes. tone "dark" em fundo azul. */
+/** Rótulo mono "Diagnóstico" com um traço de 32px antes. tone "dark" em fundo azul. */
 export function Eyebrow({
   children,
   tone = "light",

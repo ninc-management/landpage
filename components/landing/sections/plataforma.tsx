@@ -102,7 +102,7 @@ const TICKS_MINOR =
 const TICKS_MAJOR =
   "[background-image:linear-gradient(to_right,rgb(16_38_168/0.4)_1px,transparent_1px)] [background-size:60px_100%] dark:[background-image:linear-gradient(to_right,rgb(255_255_255/0.5)_1px,transparent_1px)]";
 
-/** FL. 04 — Tour em abas pelos módulos do dia a dia, com capturas reais. Servidor; as abas (Radix) hidratam sozinhas. */
+/** Tour em abas pelos módulos do dia a dia, com capturas reais. Servidor; as abas (Radix) hidratam sozinhas. */
 export function ProductTour() {
   return (
     <Section id="plataforma" className="overflow-x-clip bg-white dark:bg-ninc-950">
@@ -110,7 +110,7 @@ export function ProductTour() {
         <SectionHeading
           id="plataforma-titulo"
           align="center"
-          eyebrow="FL. 04 — Plataforma"
+          eyebrow="Plataforma"
           title="As telas que a sua equipe vai usar todo dia."
           description="Navegue pelos módulos e veja como o NINC organiza a rotina comercial e financeira de uma empresa de projetos."
         >

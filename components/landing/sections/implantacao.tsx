@@ -117,7 +117,7 @@ export function GetStarted() {
         <SectionHeading
           id="implantacao-titulo"
           align="center"
-          eyebrow="FL. 09 — Implantação"
+          eyebrow="Implantação"
           title="Configure hoje. Envie a primeira proposta ainda hoje."
           description="Sem projeto de implantação e sem consultoria obrigatória. São três passos, e a Central de Suporte acompanha cada um deles."
         />

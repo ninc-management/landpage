@@ -33,7 +33,7 @@ describe("ProblemSection", () => {
 
     const section = screen.getByRole("region", { name: /Sua empresa entrega projetos/i });
     expect(section).toHaveAttribute("id", "problema");
-    expect(screen.getByText("FL. 02 — Diagnóstico")).toBeInTheDocument();
+    expect(screen.getByText("Diagnóstico")).toBeInTheDocument();
   });
 
   it("maps each of the 5 pains to a NINC capability with screen-reader prefixes", () => {
