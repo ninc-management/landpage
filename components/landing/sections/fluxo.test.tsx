@@ -31,7 +31,7 @@ describe("FlowSection", () => {
     const heading = screen.getByRole("heading", { level: 2, name: /Uma linha contínua do comercial ao financeiro/i });
     expect(heading).toHaveAttribute("id", "fluxo-titulo");
     expect(screen.getByRole("region", { name: /Uma linha contínua/i })).toHaveAttribute("id", "fluxo");
-    expect(screen.getByText("FL. 03 — Fluxo")).toBeInTheDocument();
+    expect(screen.getByText("Fluxo")).toBeInTheDocument();
 
     expect(screen.getByRole("link", { name: /Ver a plataforma em ação/i })).toHaveAttribute("href", "#apresentacao");
     expect(screen.queryByRole("link", { name: /guia/i })).not.toBeInTheDocument();

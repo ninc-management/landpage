@@ -31,7 +31,7 @@ describe("ProductTour", () => {
     const heading = screen.getByRole("heading", { level: 2, name: /As telas que a sua equipe vai usar todo dia/i });
     expect(heading).toHaveAttribute("id", "plataforma-titulo");
     expect(screen.getByRole("region", { name: /As telas que a sua equipe/i })).toHaveAttribute("id", "plataforma");
-    expect(screen.getByText("FL. 04 — Plataforma")).toBeInTheDocument();
+    expect(screen.getByText("Plataforma")).toBeInTheDocument();
     expect(screen.getByText("Capturas reais do sistema")).toBeInTheDocument();
   });
 

@@ -123,7 +123,7 @@ function Thumb({
   );
 }
 
-/** FL. 05 — Comercial: as seis etapas da proposta, o PDF com a marca da empresa e a identidade visual. */
+/** Comercial: as seis etapas da proposta, o PDF com a marca da empresa e a identidade visual. */
 export function ProposalsSection() {
   return (
     <Section
@@ -137,7 +137,7 @@ export function ProposalsSection() {
         <SectionHeading
           className="lg:col-span-5"
           id="propostas-titulo"
-          eyebrow="FL. 05 — Comercial"
+          eyebrow="Comercial"
           title={
             <>
               Propostas{" "}

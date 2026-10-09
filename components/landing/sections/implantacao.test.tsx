@@ -28,7 +28,7 @@ describe("GetStarted", () => {
 
     const section = screen.getByRole("region", { name: "Configure hoje. Envie a primeira proposta ainda hoje." });
     expect(section).toHaveAttribute("id", "implantacao");
-    expect(screen.getByText("FL. 09 — Implantação")).toBeInTheDocument();
+    expect(screen.getByText("Implantação")).toBeInTheDocument();
 
     const steps = within(screen.getByRole("list")).getAllByRole("listitem");
     expect(steps).toHaveLength(3);

@@ -91,7 +91,7 @@ function Answer({ a, link }: (typeof FAQ)[number]) {
   );
 }
 
-/** FL. 11 — Dúvidas: objeções finais de compra, só com fatos, + JSON-LD FAQPage. */
+/** Dúvidas: objeções finais de compra, só com fatos, + JSON-LD FAQPage. */
 export function FaqSection() {
   return (
     <Section
@@ -106,7 +106,7 @@ export function FaqSection() {
           <div className="contents lg:sticky lg:top-24 lg:col-span-4 lg:block lg:self-start">
             <SectionHeading
               id="duvidas-titulo"
-              eyebrow="FL. 11 — Dúvidas"
+              eyebrow="Dúvidas"
               title="Perguntas frequentes"
               description="O que as empresas de engenharia e projetos costumam perguntar antes de começar."
               className="order-1"

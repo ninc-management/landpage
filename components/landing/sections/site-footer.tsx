@@ -58,7 +58,7 @@ function FooterLink({ label, href }: { label: string; href: string }) {
   );
 }
 
-/** FL. — Rodapé: promessa, mapa do site, contato e barra legal em forma de carimbo. */
+/** Rodapé: promessa, mapa do site, contato e barra legal em forma de carimbo. */
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-slate-200 bg-slate-50">
