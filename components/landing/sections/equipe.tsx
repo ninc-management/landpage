@@ -76,7 +76,7 @@ const LOGIN: Array<{ icon: LucideIcon; title: string; text: string }> = [
   },
 ];
 
-/** FL. 07 — Equipe e segurança: permissões, convites, identidade visual e formas de login. */
+/** Equipe e segurança: permissões, convites, identidade visual e formas de login. */
 export function TeamSecuritySection() {
   return (
     <Section
@@ -100,7 +100,7 @@ export function TeamSecuritySection() {
             id="equipe-titulo"
             tone="dark"
             align="center-lg"
-            eyebrow="FL. 07 — Equipe e segurança"
+            eyebrow="Equipe e segurança"
             title={
               <>
                 Cada pessoa com o acesso certo. <GradientText>A sua marca em tudo.</GradientText>

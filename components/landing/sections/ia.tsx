@@ -202,7 +202,7 @@ function ChatDemo() {
   );
 }
 
-/** FL. 08 — IA conectada: o servidor MCP da NINC no Claude e no ChatGPT. */
+/** IA conectada: o servidor MCP da NINC no Claude e no ChatGPT. */
 export function AiSection() {
   return (
     <Section
@@ -220,7 +220,7 @@ export function AiSection() {
           <Reveal>
             <SectionHeading
               id="ia-titulo"
-              eyebrow="FL. 08 — IA conectada (MCP)"
+              eyebrow="IA conectada (MCP)"
               title={
                 <>
                   Converse com o seu ERP. <GradientText tone="light">No Claude ou no ChatGPT.</GradientText>

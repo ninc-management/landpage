@@ -185,14 +185,14 @@ function BentoCard({
   );
 }
 
-/** FL. 06 — O financeiro como back office de verdade: bento com conciliação, validação, tesouraria, rateio e relatórios. */
+/** O financeiro como back office de verdade: bento com conciliação, validação, tesouraria, rateio e relatórios. */
 export function FinanceSection() {
   return (
     <Section id="financeiro" className="bg-white dark:bg-ninc-950">
       <Container>
         <SectionHeading
           id="financeiro-titulo"
-          eyebrow="FL. 06 — Financeiro"
+          eyebrow="Financeiro"
           title="O financeiro de uma empresa de projetos, sem planilha paralela."
           description="Saiba o que entra, o que sai e quanto cada projeto rende. Confira os movimentos e feche o mês com segurança."
         />

@@ -27,7 +27,7 @@ describe("FaqSection", () => {
     const { container } = render(<FaqSection />);
 
     expect(screen.getByRole("region", { name: "Perguntas frequentes" })).toHaveAttribute("id", "duvidas");
-    expect(screen.getByText("FL. 11 — Dúvidas")).toBeInTheDocument();
+    expect(screen.getByText("Dúvidas")).toBeInTheDocument();
 
     const first = screen.getByRole("button", { name: "Para que tipo de empresa o NINC foi feito?" });
     expect(first).toHaveAttribute("aria-expanded", "true");

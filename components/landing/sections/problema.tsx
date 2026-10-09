@@ -41,7 +41,7 @@ export function ProblemSection() {
         <SectionHeading
           id="problema-titulo"
           align="center-lg"
-          eyebrow="FL. 02 — Diagnóstico"
+          eyebrow="Diagnóstico"
           title="Sua empresa entrega projetos. A gestão não pode virar mais um."
           description="Proposta no editor de texto, recebimentos na planilha, extrato conferido à mão. Cada ferramenta solta é mais um lugar para o número não bater."
         />

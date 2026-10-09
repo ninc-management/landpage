@@ -18,7 +18,7 @@ describe("AiSection", () => {
 
     const section = screen.getByRole("region", { name: /Converse com o seu ERP/ });
     expect(section).toHaveAttribute("id", "ia");
-    expect(screen.getByText("FL. 08 — IA conectada (MCP)")).toBeInTheDocument();
+    expect(screen.getByText("IA conectada (MCP)")).toBeInTheDocument();
 
     expect(screen.getByText("Claude")).toBeInTheDocument();
     expect(screen.getByText("ChatGPT")).toBeInTheDocument();

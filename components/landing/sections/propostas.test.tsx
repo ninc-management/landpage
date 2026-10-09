@@ -28,7 +28,7 @@ describe("ProposalsSection", () => {
 
     const section = screen.getByRole("region", { name: "Propostas à altura do projeto que você entrega." });
     expect(section).toHaveAttribute("id", "propostas");
-    expect(screen.getByText("FL. 05 — Comercial")).toBeInTheDocument();
+    expect(screen.getByText("Comercial")).toBeInTheDocument();
 
     expect(screen.getAllByRole("heading", { level: 3 }).map((h) => h.textContent)).toEqual([
       "Informações básicas",

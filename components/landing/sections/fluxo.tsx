@@ -180,7 +180,7 @@ export function FlowSection() {
           <SectionHeading
             id="fluxo-titulo"
             tone="dark"
-            eyebrow="FL. 03 — Fluxo"
+            eyebrow="Fluxo"
             title="Uma linha contínua do comercial ao financeiro."
             description="Acompanhe o caminho da proposta ao resultado. Cada etapa alimenta a próxima."
           >
