@@ -48,16 +48,16 @@ it("shows three reviews on desktop and replaces them every eight seconds", () =>
       within(card).getByRole("img", { name: `Foto de ${testimonial.name}` }),
     ).toHaveAttribute("src", testimonial.photo);
     expect(
-      within(card).getByRole("img", { name: "5 de 5 estrelas" }),
+      within(card).getByRole("img", { name: `${testimonial.rating} de 5 estrelas` }),
     ).toBeInTheDocument();
   }
   act(() => {
-    jest.advanceTimersByTime(24000);
+    jest.advanceTimersByTime(8000 * (testimonials.length - 1));
   });
   expect(names()).toEqual(testimonials.slice(0, 3).map((t) => t.name));
 });
 
-it("shows one review at a time on mobile and rotates through all four people", () => {
+it("shows one review at a time on mobile and rotates through every person with their rating", () => {
   desktop = false;
   render(<TestimonialsSection />);
   for (const testimonial of testimonials) {
@@ -65,6 +65,12 @@ it("shows one review at a time on mobile and rotates through all four people", (
     expect(
       screen.getByRole("img", { name: `Foto de ${testimonial.name}` }),
     ).toHaveAttribute("src", testimonial.photo);
+    expect(
+      screen.getByRole("img", { name: `${testimonial.rating} de 5 estrelas` }),
+    ).toBeInTheDocument();
+    expect(
+      within(screen.getByRole("article")).getByText(testimonial.quote),
+    ).toBeInTheDocument();
     act(() => {
       jest.advanceTimersByTime(8000);
     });

@@ -22,5 +22,35 @@
     "rating": 5,
     "quote": "Plataforma muito completa, dinâmica e fácil de usar para a gestão de propostas e contratos. As funcionalidades ajudam bastante a ter uma visão clara e atualizada dos processos da empresa, ajudando o acompanhamento no dia a dia. Também é uma plataforma leve e com boa velocidade de resposta. Outro ponto positivo é a equipe de suporte, que sempre atende de forma rápida quando precisamos de algum ajuste ou auxílio.",
     "photo": "/landing/depoimentos/izaac-simao.jpg"
+  },
+  {
+    "name": "João Reis",
+    "rating": 5,
+    "quote": "A plataforma NINC se destaca pela interface limpa, intuitiva e muito fácil de utilizar. A navegação é fluida e os recursos de cadastro, elaboração de propostas e acompanhamento por dashboards tornam a gestão comercial muito mais organizada e eficiente. Uma ferramenta completa, prática e que contribui diretamente para otimizar nossa rotina.",
+    "photo": "/landing/depoimentos/joao-reis.jpg"
+  },
+  {
+    "name": "Tales Gomes",
+    "rating": 4,
+    "quote": "Uma excelente experiência. Agiliza bastante as propostas comerciais e é ótimo para gerenciar os contratos.",
+    "photo": "/landing/depoimentos/tales-gomes.jpg"
+  },
+  {
+    "name": "Gedson Cunha",
+    "rating": 4,
+    "quote": "A plataforma auxilia bastante na elaboração de proposta e na gestão de contratos.",
+    "photo": "/landing/depoimentos/gedson-cunha.jpg"
+  },
+  {
+    "name": "Marco Rodrigues",
+    "rating": 4,
+    "quote": "A plataforma é a melhor ferramenta que utilizei para elaboração de propostas, aprovação de propostas e gestão de contratos, me ajudando, também, no gerenciamento dos entregáveis, controle de prazos acordados e no controle financeiro do contrato. Excepcional ferramenta e com grande potencial de crescimento. Um outro aspecto importante, sempre vem evoluindo e aberto a sugestões de melhoria e desenvolvimento contínuo para melhor atender às demandas dos usuários.",
+    "photo": "/landing/depoimentos/marco-rodrigues.jpg"
+  },
+  {
+    "name": "Lidiane Almeida",
+    "rating": 4,
+    "quote": "O pouco que tenho usado me mostrou ser intuitiva e mais prática que a anterior utilizada, mas ainda precisa ajustar a formatação do PDF.",
+    "photo": "/landing/depoimentos/lidiane-almeida.jpg"
   }
 ]
