@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { FinalCta } from "./cta-final";
 
@@ -23,27 +23,19 @@ beforeAll(() => {
 });
 
 describe("FinalCta", () => {
-  it("renders the offer, CTAs, contact and the flow recap", () => {
+  it("lets visitors request early access through the NINC WhatsApp", () => {
     render(<FinalCta />);
 
-    const section = screen.getByRole("region", { name: "Uma operação conectada. Do início ao fim." });
+    const section = screen.getByRole("region", { name: "Comece antes do lançamento. Com a NINC ao seu lado." });
     expect(section).toHaveAttribute("id", "cta-final");
     expect(screen.getByRole("heading", { level: 2 })).toHaveAttribute("id", "cta-final-titulo");
-    expect(screen.getByText("Do orçamento ao fechamento")).toBeInTheDocument();
-
     expect(document.querySelector('a[href="/signup"]')).toBeNull();
-    expect(screen.getByRole("link", { name: "suporte@ninc.digital" })).toHaveAttribute(
+    const contact = screen.getByRole("link", { name: "Solicitar meu acesso pelo WhatsApp" });
+    expect(contact).toHaveAttribute(
       "href",
-      "mailto:suporte@ninc.digital"
+      "https://w.app/nincerp"
     );
-
-
-    const recap = screen.getAllByRole("list").find((list) => list.tagName === "OL")!;
-    expect(within(recap).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
-      "Proposta aprovada01",
-      "Contrato gerado02",
-      "Parcelas no financeiro03",
-      "Mês conciliado04",
-    ]);
+    expect(contact).toHaveAttribute("target", "_blank");
+    expect(contact.getAttribute("rel")).toContain("noopener");
   });
 });
