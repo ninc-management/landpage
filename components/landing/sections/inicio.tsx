@@ -1,5 +1,5 @@
 import { assetPath } from "@/lib/assets";
-import { BadgeCheck, CalendarClock, Check, MessageCircle, Workflow } from "lucide-react";
+import { BadgeCheck, CalendarClock, Check, MessageCircle } from "lucide-react";
 import { NINC_WHATSAPP_URL } from "@/lib/landing-contact";
 import { NincMonogram } from "@/components/ninc-logo";
 import { cn } from "@/lib/utils";
@@ -140,15 +140,6 @@ export function Hero() {
               className="w-full sm:w-auto"
             >
               Ver apresentação
-            </CtaLink>
-            <CtaLink
-              href="#fluxo"
-              variant="ghost-dark"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              <Workflow aria-hidden="true" className="h-4 w-4" />
-              Ver como funciona
             </CtaLink>
           </div>
 
