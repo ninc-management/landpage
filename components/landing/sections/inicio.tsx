@@ -1,5 +1,6 @@
 import { assetPath } from "@/lib/assets";
-import { BadgeCheck, CalendarClock, Check, Workflow } from "lucide-react";
+import { BadgeCheck, CalendarClock, Check, MessageCircle } from "lucide-react";
+import { NINC_WHATSAPP_URL } from "@/lib/landing-contact";
 import { NincMonogram } from "@/components/ninc-logo";
 import { cn } from "@/lib/utils";
 import { ScreenshotZoom } from "../screenshot-zoom";
@@ -10,6 +11,8 @@ import {
   Container,
   Cota,
   CtaLink,
+  ctaClassName,
+  FOCUS_DARK,
   GradientText,
   MASK,
   ScreenFrame,
@@ -115,30 +118,37 @@ export function Hero() {
 
           <div
             className={cn(
-              "mt-10 flex flex-col gap-3 sm:flex-row",
+              "mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap",
               ENTER,
               "motion-safe:delay-300",
             )}
           >
+            <a
+              href={NINC_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaClassName("light", "lg", "w-full sm:w-auto")}
+            >
+              <MessageCircle aria-hidden="true" className="h-4 w-4 shrink-0" />
+              Quero acesso antecipado
+            </a>
             <CtaLink
               href="#apresentacao"
-              variant="light"
+              variant="ghost-dark"
               size="lg"
               arrow
               className="w-full sm:w-auto"
             >
               Ver apresentação
             </CtaLink>
-            <CtaLink
-              href="#fluxo"
-              variant="ghost-dark"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              <Workflow aria-hidden="true" className="h-4 w-4" />
-              Ver como funciona
-            </CtaLink>
           </div>
+
+          <p className={cn("mt-4 text-sm leading-6 text-ninc-100/80", ENTER, "motion-safe:delay-300")}>
+            30 vagas de acesso antecipado · 7 dias grátis.{" "}
+            <a href="#cta-final" className={cn("rounded-sm text-white underline underline-offset-4", FOCUS_DARK)}>
+              Ver condições do acesso antecipado
+            </a>
+          </p>
 
           <ul
             className={cn(

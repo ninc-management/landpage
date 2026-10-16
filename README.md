@@ -2,6 +2,8 @@
 
 Landing independente da aplicação NINC, preparada para GitHub Pages. Mantém o visual azul e branco aprovado, a logo oficial, capturas da plataforma, depoimentos com fotos e a apresentação hospedada no YouTube. O endereço atual é **https://ninc.digital/**.
 
+O acesso antecipado é solicitado pelo WhatsApp, com o link centralizado em `lib/landing-contact.ts`. A home e a seção final apresentam a oferta de 30 vagas: 7 dias grátis, reunião de implantação com a equipe NINC e, para quem escolher continuar, R$ 50 por mês até o lançamento oficial. As credenciais são fornecidas pela equipe pelo WhatsApp. Participantes continuam na plataforma após o lançamento com um desconto especial na assinatura.
+
 ## Desenvolvimento e validação
 
 Use Node.js 22 ou superior:

@@ -25,7 +25,7 @@ beforeAll(() => {
 
 
 describe("LandingPage", () => {
-  it("shows real testimonials and the presentation without pricing or trial promises", async () => {
+  it("shows real testimonials and the presentation without automated signup", async () => {
     render(await LandingPage());
     expect(document.getElementById("planos")).toBeNull();
     expect(document.querySelector('a[href="/signup"]')).toBeNull();

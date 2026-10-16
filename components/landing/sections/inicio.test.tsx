@@ -13,7 +13,9 @@ describe("Hero", () => {
     expect(screen.getByRole("region", { name: /do orçamento ao fechamento do mês/i })).toHaveAttribute("id", "inicio");
 
     expect(screen.getByRole("link", { name: "Ver apresentação" })).toHaveAttribute("href", "#apresentacao");
-    expect(screen.getByRole("link", { name: "Ver como funciona" })).toHaveAttribute("href", "#fluxo");
+    expect(screen.queryByRole("link", { name: "Ver como funciona" })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Quero acesso antecipado" })).toHaveAttribute("href", "https://w.app/nincerp");
+    expect(screen.getByRole("link", { name: "Ver condições do acesso antecipado" })).toHaveAttribute("href", "#cta-final");
     expect(screen.getByText("IA conectada por MCP")).toBeInTheDocument();
 
     const painel = screen.getByAltText(/painel inicial do ninc erp/i);
