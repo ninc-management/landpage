@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUp, Mail } from "lucide-react";
 import { NincLogo, NincMonogram } from "@/components/ninc-logo";
 import { cn } from "@/lib/utils";
+import { LANDING_SOCIAL_PROFILES } from "@/lib/landing-social";
 import { Container, FOCUS } from "../primitives";
 import { Stagger, StaggerItem } from "../reveal";
 
@@ -36,6 +37,7 @@ const COLUMNS: FooterColumn[] = [
     title: "Contato",
     links: [
       { label: "Fale com a gente", href: `mailto:${EMAIL}` },
+      ...LANDING_SOCIAL_PROFILES,
     ],
   },
 ];
@@ -45,8 +47,11 @@ const LINK = cn(
   FOCUS
 );
 
-/** Rotas via next/link; âncoras e mailto via <a>. */
+/** Rotas via next/link; âncoras, contato e perfis externos via <a>. */
 function FooterLink({ label, href }: { label: string; href: string }) {
+  if (href.startsWith("https://")) {
+    return <a href={href} target="_blank" rel="noopener noreferrer" className={LINK}>{label}</a>;
+  }
   return /^(#|mailto:)/.test(href) ? (
     <a href={href} className={LINK}>
       {label}

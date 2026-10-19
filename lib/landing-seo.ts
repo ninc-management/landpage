@@ -1,5 +1,6 @@
 import type { Metadata, MetadataRoute } from 'next';
 import { resolveSiteSettings } from '../config/site.cjs';
+import { LANDING_SOCIAL_PROFILES } from './landing-social';
 
 export const LANDING_TITLE = 'NINC ERP | ERP para engenharia e projetos';
 export const LANDING_DESCRIPTION = 'ERP para empresas de engenharia e projetos: propostas com sua marca, contratos, gestão financeira, conciliação bancária e IA conectada em um só sistema.';
@@ -73,6 +74,7 @@ export function getLandingSchema(config: SeoConfig = getSeoConfig()) {
       {
         '@type': 'Organization', '@id': id('organizacao'), name: 'NINC ERP', alternateName: 'NINC', url: config.url,
         description: LANDING_DESCRIPTION,
+        sameAs: LANDING_SOCIAL_PROFILES.map(({ href }) => href),
         logo: { '@type': 'ImageObject', url: new URL('landing/ninc-erp.png', config.url).href, width: 1302, height: 518 },
         email: 'suporte@ninc.digital',
       },
