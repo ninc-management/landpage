@@ -69,4 +69,18 @@ Copie `.env.example` para `.env.local` somente se precisar personalizar a URL no
 
 O SEO mantém canonical, Open Graph, Twitter, identificação da marca e do produto em JSON-LD e as perguntas reais do FAQ. Sitemap e dados estruturados usam o mesmo domínio de publicação. Posição e indexação no Google não são garantidas; a confirmação de domínio e o envio de sitemap ao Search Console são feitos após publicar.
 
+## Primeira configuração no Google Search Console
+
+O nome preferido do site e da organização é **NINC ERP**, consistente com o título e o Open Graph. O JSON-LD também informa o domínio como alternativa de nome para o site, ajudando a diferenciar a plataforma de outras organizações chamadas NINC.
+
+1. Entrar em [Google Search Console](https://search.google.com/search-console/welcome) com a conta que ficará responsável pelo site.
+2. Adicionar uma propriedade de **Prefixo do URL** com `https://ninc.digital/` e escolher a verificação por **Tag HTML**.
+3. Copiar somente o valor de `content` da tag `google-site-verification` e configurá-lo na variável de repositório **GOOGLE_SITE_VERIFICATION**, em Settings → Secrets and variables → Actions → Variables. Não é a senha da conta Google.
+4. Executar o workflow de publicação na branch `main` ou aguardar o próximo deploy. A variável já é consumida no build. Confirmar que a tag está presente no código-fonte público antes de clicar em **Verificar** no Search Console. Manter o token nos próximos builds.
+5. Enviar `https://ninc.digital/sitemap.xml` na seção **Sitemaps**. Na **Inspeção de URL**, consultar `https://ninc.digital/`, executar o teste da URL publicada e, se elegível, solicitar a indexação.
+
+A ausência de resultados em uma busca `site:` não comprova que uma página está fora do índice. O diagnóstico deve ser confirmado na Inspeção de URL. Solicitar indexação repetidamente não acelera a inclusão e não garante posições nas buscas.
+
+Referências do Google: [nome do site](https://developers.google.com/search/docs/appearance/site-names), [verificação de propriedade](https://support.google.com/webmasters/answer/9008080), [solicitação de rastreamento](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
 Referências: [exportação estática no Next.js](https://nextjs.org/docs/14/app/building-your-application/deploying/static-exports), [workflows oficiais do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
