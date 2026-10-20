@@ -5,7 +5,7 @@ const { resolveSiteSettings } = require('../config/site.cjs');
 const out = path.resolve(__dirname, '../out');
 const site = resolveSiteSettings();
 const html = fs.readFileSync(path.join(out, 'index.html'), 'utf8');
-for (const file of ['404.html','robots.txt','sitemap.xml','.nojekyll','landing/ninc-erp.png','landing/social-preview.png','landing/apple-touch-icon.png']) {
+for (const file of ['404.html','robots.txt','sitemap.xml','.nojekyll','landing/ninc-erp.png','landing/social-preview-blue.png','landing/apple-touch-icon.png']) {
   assert.ok(fs.existsSync(path.join(out,file)), `Falta ${file}`);
 }
 assert.equal((html.match(/<h1\b/g)||[]).length,1,'A landing deve ter um único H1');

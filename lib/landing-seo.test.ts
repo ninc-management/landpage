@@ -39,7 +39,7 @@ describe('public landing SEO', () => {
     const config = getSeoConfig({ NODE_ENV: 'production', NINC_SITE_URL: 'https://example.github.io/ninc' });
     expect(config.url).toBe('https://example.github.io/ninc/');
     expect(getSeoRobots(config).sitemap).toBe('https://example.github.io/ninc/sitemap.xml');
-    expect(JSON.stringify(getLandingMetadata(config))).toContain('https://example.github.io/ninc/landing/social-preview.png');
+    expect(JSON.stringify(getLandingMetadata(config))).toContain('https://example.github.io/ninc/landing/social-preview-blue.png');
   });
 
   it('connects the real brand, website and product without inventing prices or ratings', () => {

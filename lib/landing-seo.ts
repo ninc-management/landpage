@@ -21,7 +21,7 @@ export function getSeoConfig(env: SeoEnvironment = process.env): SeoConfig {
 
 export function getLandingMetadata(config: SeoConfig = getSeoConfig()): Metadata {
   const image = {
-    url: new URL('landing/social-preview.png', config.url).href,
+    url: new URL('landing/social-preview-blue.png', config.url).href,
     width: 1200,
     height: 630,
     alt: 'NINC ERP — propostas, contratos e financeiro para engenharia e projetos',
@@ -87,7 +87,7 @@ export function getLandingSchema(config: SeoConfig = getSeoConfig()) {
         '@type': 'WebPage', '@id': id('pagina'), url: config.url, name: LANDING_TITLE,
         description: LANDING_DESCRIPTION, inLanguage: 'pt-BR', isPartOf: { '@id': id('site') },
         about: { '@id': id('software') }, mainEntity: { '@id': id('software') },
-        primaryImageOfPage: { '@type': 'ImageObject', url: new URL('landing/social-preview.png', config.url).href, width: 1200, height: 630 },
+        primaryImageOfPage: { '@type': 'ImageObject', url: new URL('landing/social-preview-blue.png', config.url).href, width: 1200, height: 630 },
       },
       {
         '@type': 'WebApplication', '@id': id('software'), name: 'NINC ERP', url: config.url,
