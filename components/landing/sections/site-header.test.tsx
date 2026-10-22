@@ -35,7 +35,7 @@ describe("SiteHeader", () => {
     expect(within(nav).getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(HREFS);
 
     expect(screen.getByRole("link", { name: /Ver apresentação/ })).toHaveAttribute("href", "#apresentacao");
-    expect(screen.getByAltText(/NINC ERP/)).toHaveClass("brightness-0", "invert");
+    expect(screen.getByAltText(/NINC ERP/)).toHaveAttribute("src", "/brand/ninc-erp-logotipo-negativo.png");
   });
 
   it("has no theme toggle", () => {
