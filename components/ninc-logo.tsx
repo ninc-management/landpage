@@ -1,23 +1,23 @@
-import type { SVGProps } from 'react';
+import type { HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import { assetPath } from '@/lib/assets';
 
-/** Logo oficial com fundo transparente; variantes mantidas do layout aprovado. */
+/** Arquivos oficiais: positivo em fundos claros, negativo em fundos escuros. */
 export function NincLogo({ size = 'md', variant = 'white', className }: {
   size?: 'sm' | 'md'; variant?: 'white' | 'blue'; className?: string;
 }) {
   const width = size === 'sm' ? 'w-36 sm:w-40' : 'w-56';
-  if (variant === 'blue') return (
-    <span role="img" aria-label="NINC ERP — Serviços de Engenharia e Projetos"
-      style={{ maskImage: `url("${assetPath('/landing/ninc-erp.png')}")` }}
-      className={cn('inline-block aspect-[1302/518] shrink-0 bg-ninc-700 [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]', width, className)} />
-  );
-  return <img src={assetPath('/landing/ninc-erp.png')} alt="NINC ERP — Serviços de Engenharia e Projetos"
-    width={1302} height={518} className={cn('h-auto shrink-0 object-contain brightness-0 invert', width, className)} />;
+  const descriptor = size === 'md' ? '-descritor' : '';
+  const tone = variant === 'blue' ? 'positivo' : 'negativo';
+  return <img src={assetPath(`/brand/ninc-erp-logotipo${descriptor}-${tone}.png`)} alt="NINC ERP — Serviços de Engenharia e Projetos"
+    width={1755} height={size === 'md' ? 873 : 696} className={cn('h-auto shrink-0 object-contain', width, className)} />;
 }
 
-export function NincMonogram({ size = 24, ...props }: SVGProps<SVGSVGElement> & { size?: number }) {
-  return <svg width={size} height={size} viewBox="0 0 156 156" fill="none" aria-hidden="true" {...props}>
-    <path d="M0 52V28C0 12.5 12.5 0 28 0H88C125.6 0 156 30.4 156 68V156H104V52H0Z" fill="currentColor" />
-  </svg>;
+export function NincMonogram({ size = 24, style, ...props }: HTMLAttributes<HTMLSpanElement> & { size?: number }) {
+  const mask = `url("${assetPath('/brand/ninc-erp-simbolo-azul-256.png')}")`;
+  return <span aria-hidden="true" {...props} style={{
+    display: 'inline-block', width: size, height: size, flexShrink: 0,
+    backgroundColor: 'currentColor', maskImage: mask, WebkitMaskImage: mask,
+    maskSize: 'contain', maskPosition: 'center', maskRepeat: 'no-repeat', ...style,
+  }} />;
 }

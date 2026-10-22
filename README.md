@@ -61,7 +61,9 @@ Copie `.env.example` para `.env.local` somente se precisar personalizar a URL no
 - `app/`: página inicial, layout e robots/sitemap gerados no build.
 - `components/landing/`: seções e interações da página aprovada.
 - `components/ui/`: somente os componentes usados pela landing.
-- `public/landing/`: logo, fotos, favicon e imagem de compartilhamento.
+- `public/landing/`: capturas da plataforma, fotos e arquivos anteriores mantidos para compatibilidade de URLs.
+- `public/brand/`: logos, símbolo e ícones oficiais do pacote **Ninc Company Design System (1).zip**, recebido em 22/10/2026. Os PNGs originais são usados sem filtros de cor ou alteração das proporções: variante negativa no cabeçalho e no menu escuros; positiva no rodapé claro. Os ícones de interface de ações continuam com seus significados originais.
+- `scripts/brand/social-preview.html`: fonte editável da prévia de compartilhamento, renderizada em 1200 × 630 com a logo oficial positiva para `public/brand/ninc-erp-social-preview.png`. Servir este HTML e `/brand/` a partir de `public/` para atualizar a captura. Metadados de Open Graph, Twitter e JSON-LD usam a mesma imagem.
 - `public/ai-providers/`: ícones dos assistentes usados na seção de IA.
 - `public/suporte/guias/`: capturas estáticas da plataforma.
 - `config/site.cjs` e `lib/assets.ts`: resolução consistente de domínio e caminhos.

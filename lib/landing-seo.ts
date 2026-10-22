@@ -21,7 +21,7 @@ export function getSeoConfig(env: SeoEnvironment = process.env): SeoConfig {
 
 export function getLandingMetadata(config: SeoConfig = getSeoConfig()): Metadata {
   const image = {
-    url: new URL('landing/social-preview-blue.png', config.url).href,
+    url: new URL('brand/ninc-erp-social-preview.png', config.url).href,
     width: 1200,
     height: 630,
     alt: 'NINC ERP — propostas, contratos e financeiro para engenharia e projetos',
@@ -32,9 +32,13 @@ export function getLandingMetadata(config: SeoConfig = getSeoConfig()): Metadata
     description: LANDING_DESCRIPTION,
     applicationName: 'NINC ERP',
     icons: {
-      icon: [{ url: new URL('landing/favicon.svg', config.url).pathname, type: 'image/svg+xml' }],
-      shortcut: new URL('landing/favicon.svg', config.url).pathname,
-      apple: [{ url: new URL('landing/apple-touch-icon.png', config.url).pathname, sizes: '180x180', type: 'image/png' }],
+      icon: [
+        { url: new URL('brand/ninc-erp-favicon-32.png', config.url).pathname, sizes: '32x32', type: 'image/png' },
+        { url: new URL('brand/ninc-erp-favicon-64.png', config.url).pathname, sizes: '64x64', type: 'image/png' },
+        { url: new URL('brand/ninc-erp-icone-512.png', config.url).pathname, sizes: '512x512', type: 'image/png' },
+      ],
+      shortcut: new URL('brand/ninc-erp-favicon-32.png', config.url).pathname,
+      apple: [{ url: new URL('brand/ninc-erp-icone-180.png', config.url).pathname, sizes: '180x180', type: 'image/png' }],
     },
     alternates: { canonical: config.url },
     robots: {
@@ -75,7 +79,7 @@ export function getLandingSchema(config: SeoConfig = getSeoConfig()) {
         '@type': 'Organization', '@id': id('organizacao'), name: 'NINC ERP', alternateName: 'NINC', url: config.url,
         description: LANDING_DESCRIPTION,
         sameAs: LANDING_SOCIAL_PROFILES.map(({ href }) => href),
-        logo: { '@type': 'ImageObject', url: new URL('landing/ninc-erp.png', config.url).href, width: 1302, height: 518 },
+        logo: { '@type': 'ImageObject', url: new URL('brand/ninc-erp-logotipo-descritor-positivo.png', config.url).href, width: 1755, height: 873 },
         email: 'suporte@ninc.digital',
       },
       {
@@ -87,7 +91,7 @@ export function getLandingSchema(config: SeoConfig = getSeoConfig()) {
         '@type': 'WebPage', '@id': id('pagina'), url: config.url, name: LANDING_TITLE,
         description: LANDING_DESCRIPTION, inLanguage: 'pt-BR', isPartOf: { '@id': id('site') },
         about: { '@id': id('software') }, mainEntity: { '@id': id('software') },
-        primaryImageOfPage: { '@type': 'ImageObject', url: new URL('landing/social-preview-blue.png', config.url).href, width: 1200, height: 630 },
+        primaryImageOfPage: { '@type': 'ImageObject', url: new URL('brand/ninc-erp-social-preview.png', config.url).href, width: 1200, height: 630 },
       },
       {
         '@type': 'WebApplication', '@id': id('software'), name: 'NINC ERP', url: config.url,
